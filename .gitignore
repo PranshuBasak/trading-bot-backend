@@ -1,0 +1,28 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore any log files
+*.log
+
+# Ignore compiled files
+*.class
+*.jar
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment configuration files
+.env
+
+# Ignore package-lock.json file for Node.js projects
+package-lock.json
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
+# Ignore build directories
+build/
+dist/
+target/
