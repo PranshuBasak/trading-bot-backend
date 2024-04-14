@@ -1,0 +1,63 @@
+{
+    "AAPL": {
+       "Full_Name": "Apple Inc."
+    },
+    "MSFT": {
+       "Full_Name": "Microsoft Corporation"
+    },
+    "GOOGL": {
+       "Full_Name": "Alphabet Inc."
+    },
+    "AMZN": {
+       "Full_Name": "Amazon.com, Inc."
+    },
+    "FB": {
+       "Full_Name": "Facebook, Inc."
+    },
+    "BRK.B": {
+       "Full_Name": "Berkshire Hathaway Inc."
+    },
+    "JNJ": {
+       "Full_Name": "Johnson & Johnson"
+    },
+    "V": {
+       "Full_Name": "Visa Inc."
+    },
+    "JPM": {
+       "Full_Name": "JPMorgan Chase & Co."
+    },
+    "WMT": {
+       "Full_Name": "Walmart Inc."
+    },
+    "PG": {
+       "Full_Name": "Procter & Gamble Co."
+    },
+    "MA": {
+       "Full_Name": "Mastercard Incorporated"
+    },
+    "DIS": {
+       "Full_Name": "The Walt Disney Company"
+    },
+    "XOM": {
+       "Full_Name": "Exxon Mobil Corporation"
+    },
+    "NFLX": {
+       "Full_Name": "Netflix, Inc."
+    },
+    "TSLA": {
+       "Full_Name": "Tesla, Inc."
+    },
+    "BAC": {
+       "Full_Name": "Bank of America Corporation"
+    },
+    "C": {
+       "Full_Name": "Citigroup Inc."
+    },
+    "KO": {
+       "Full_Name": "Coca-Cola Company"
+    },
+    "HD": {
+       "Full_Name": "Home Depot, Inc."
+    }
+   }
+   
