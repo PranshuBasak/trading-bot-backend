@@ -64,7 +64,7 @@ const alpaca = new Alpaca({
 const options = {
     headers: {
     accept: 'text/event-stream',
-    authorization: 'Basic Q0s0R1hSUjg4OU83NERBVzFVSDM6YXhqWXVSd3Y0YmU5dDdHZ2IwYktHU29iWjNBR1Z0Y2hsWHVzYmN1RQ=='
+    authorization: `Basic ${process.env.WEB_AUTH}`
     },
       responseType: 'stream'
 };
