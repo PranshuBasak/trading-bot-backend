@@ -9,38 +9,47 @@ const WebSocket = require('ws');
 const key = process.env.BROKER_KEY;
 const secret = process.env.BROKER_SECRET_KEY;
 
-// Use the appropriate URL for paper trading or live trading
 const wsUrl = 'wss://paper-api.alpaca.markets/stream'; 
 
 const ws = new WebSocket(wsUrl);
 
-ws.on('open', function open() {
-  console.log('Connected to Alpaca WebSocket');
 
-  // Authenticate upon connection
-  ws.send(JSON.stringify({
-    action: 'auth',
-    key: key,
-    secret: secret
-  }));
-});
 
-ws.on('message', function incoming(data) {
-    const message = JSON.parse(data);
   
-    if (message.stream === 'trade_updates') {
-      const tradeUpdateData = message.data;
+
+  const pricesUpdates = asyncHandler(async (req, res) => {
+    ws.on('open', function open() {
+        console.log('Connected to Alpaca WebSocket');
       
-      // Check the event type
-      if (tradeUpdateData.event === 'fill') {
-        console.log('Order filled:', tradeUpdateData);
-        
-        // Process the filled order data
-        console.log(`Filled ${tradeUpdateData.qty} of ${tradeUpdateData.order.symbol} at ${tradeUpdateData.price} each.`);
-      }
-    }
-  });
-  
+        // Authenticate upon connection
+        ws.send(JSON.stringify({
+          action: 'auth',
+          key: key,
+          secret: secret
+        }));
+      });
+      
+    ws.on('message', function incoming(data) {
+        const message = JSON.parse(data);
+      
+        if (message.stream === 'trade_updates') {
+          const tradeUpdateData = message.data;
+          
+          // Check the event type
+          if (tradeUpdateData.event === 'fill') {
+            console.log('Order filled:', tradeUpdateData);
+            
+            // Process the filled order data
+            console.log(`Filled ${tradeUpdateData.qty} of ${tradeUpdateData.order.symbol} at ${tradeUpdateData.price} each.`);
+          }
+        }
+      });
+
+      ws.on('close', function close() {
+        console.log('Connection closed');
+      });
+    
+})
 
 
 

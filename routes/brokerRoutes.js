@@ -9,5 +9,7 @@ router.post('/accounts/status',
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');  },
     brokerSSE);
+// Websocket endpoint for clients to connect to
+router.post('/prices', brokerSSE);
 
 module.exports = router;
